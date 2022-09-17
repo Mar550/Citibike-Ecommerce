@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# CitiBike (Admin Branch)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CITIBIKE is an full-stack e-commerce application created with React JS, Node JS and Express JS. The app features all the basic functionalities of an e-commerce website, and is built around the topic of electric bikes.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+You can find a quick demo of the application in the following youtube link:
+https://www.youtube.com/watch?v=C4uqrEZ69Jo&t=6s
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to run the app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Download both branches of the application and open them in a folder.
+2. Install all dependencies using the ‘npm I’ command.
+3. Start the web server using the ‘npm start’. The app will be served at http://localhost:3000/.
+4. Go to http://localhost:3000/ in your browser and access to the home page.
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Front-End
+    React JS
 
-### `npm run build`
+- Back-End
+    Node JS,
+    Express JS,
+    MongoDB
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- MongoDB account
+- Stripe Account
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependencies
 
-### `npm run eject`
+- React Router Dom
+- React Styled Components
+- Redux toolkit
+- React Scripts
+- React material UI
+- React icons
+- Express
+- JsonWebToken
+- Mongoose
+- Nodemon
+- SweetAlert2
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## User Stories
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The user can create an account
+- The user can login into his account
+- The user can search for a product
+- The user can access to the products of each category
+- The user can sort the products following their price and their adding date
+- The user can view the caracteristics of a products
+- The user can select a quantity, color and size for each product
+- The user can add to cart a product
+- The user can launch an order
+- The user can pay the order
+- The user can contact the owner of the website
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Coming features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Payment processing with stripe
+- Rating and reviews option for each product
 
-## Learn More
+## What the websie looks like 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://i.ibb.co/MSy1LtG/Capture1.png" alt="Capture1">
+<img src="https://i.ibb.co/QvQsnXV/capture-2.png" alt="capture-2">
+<img src="https://i.ibb.co/Mg3Xtth/capture-3.png" alt="capture-3">
+<img src="https://i.ibb.co/3h97yx9/capture-4.png" alt="capture-4"> 
+<img src="https://i.ibb.co/bXQthL0/capture-5.png" alt="capture-5">
