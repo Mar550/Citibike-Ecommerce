@@ -23,8 +23,8 @@
     text-align: center;
     background-color: #E8E8E8;
     gap: 20px;
+    padding: 0 0 2rem 0;
     margin-top: 3rem;
-    margin-bottom: 3rem;
     margin-left: 8rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
@@ -39,8 +39,7 @@
   .title {
     margin-top: 3rem;
     text-transform: capitalize;
-    font-size: 2.2rem;
-    font-weight: 900;
+    font-size: 2rem;
     letter-spacing: 1px;
     color: black;
   }

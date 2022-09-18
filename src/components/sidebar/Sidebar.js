@@ -13,9 +13,19 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { logoutSuccess } from "../../features/userRedux";
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogout = (e) => {
+      e.preventDefault();
+      dispatch(logoutSuccess())
+      window.location.replace('/login');
+  };
 
   return (
     <div className="sidebar">
@@ -71,16 +81,17 @@ const Sidebar = () => {
             <SettingsSystemDaydreamOutlinedIcon className="icon" />
             <span>Settings</span>
           </li>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
           </div>
-
-          <div className="bottom">
-          
-          </div>
+      
           </ul>
+          <div className="bottom">
+          <ul>
+            <li>
+          <ExitToAppIcon className="icon" onClick={handleLogout} />
+            <span>Logout</span>
+            </li>
+          </ul>
+          </div>
         </div>
     </div>
   );
