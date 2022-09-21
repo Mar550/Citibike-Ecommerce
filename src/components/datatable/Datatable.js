@@ -2,7 +2,12 @@ import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { userRequest } from "../../request";
+import { Visibility } from "@material-ui/icons";
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ModeIcon from '@mui/icons-material/Mode';
 
 const Datatable = () => {
   const [data, setData] = useState(userRows);
@@ -33,22 +38,52 @@ const Datatable = () => {
       },
     },
   ];
+
+  const [ users, setUsers] = useState([]);
+
+  useEffect(()=> {
+    const fetchUsers = async() => {
+      try {
+      const res = await userRequest.get("users/all")
+      setUsers(res.data)
+    } catch {}
+    };
+    fetchUsers();
+  }, []);
+
+
+
+  console.log(users);
+
   return (
-    <div className="datatable">
-      <div className="datatableTitle">
-        Add New User
-        <Link to="/users/new" className="link">
-          Add New
-        </Link>
+    <div className="usersContainer">
+      <span className="usersTitle"> Registered Users </span>
+      <div className="usersGrid">
+        {users.map((user) => (
+          <div className="usersFlex">
+          <div className="usersInformations" key={user._id}>
+            <p> {user._id.substring(1,8)} </p>
+            <img
+              src={
+                "https://crowd-literature.eu/wp-content/uploads/2015/01/no-avatar.gif"
+              }
+              className="usersImg"
+            />
+            <div className="usersName">
+              <span className="username">{user.username}</span>
+            </div>
+            <div className="usersButtons">
+            <Button className="usersShow" variant="outlined" startIcon={<Visibility />}>
+              Show
+            </Button>
+            <Button className="usersDelete" variant="contained" startIcon={<DeleteIcon />}>
+              Delete
+            </Button>
+            </div>
+          </div>
+          </div>
+        ))}
       </div>
-      <DataGrid
-        className="datagrid"
-        rows={data}
-        columns={userColumns.concat(actionColumn)}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
-        checkboxSelection
-      />
     </div>
   );
 };

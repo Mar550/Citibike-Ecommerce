@@ -26,7 +26,7 @@ const Login = () => {
   return (  
       <div className="container">
       <div className="login-container">
-        <img id="image" src="" alt='mySvgImage' />
+        <img id="image" src={require('../../assets/loginadmin.svg').default} alt='mySvgImage' />
           <div className="login-info-container">
             <h1 className="title"> ADMIN LOGIN </h1>
             <form className="inputs-container" >
